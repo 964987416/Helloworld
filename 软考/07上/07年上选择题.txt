@@ -1,0 +1,19 @@
+1-5 CBDCD                           35
+6-10 BCDBB                        34
+11-15 BDDCC			1345
+16-20 BCCCD			145
+21-25ABCAB			4
+26-30ACDDC			1234
+31-35ACDBB			1
+36-40CBDAC			5
+41-45ACDBC			
+46-50BABDC			345
+50-55DABBA			23
+56-60CCBAA			12345
+61-65 DBCAB			1
+66-70CDDBC			125
+71-75CBCC				
+
+表达式“(a+b)* (c-d)”的后缀表示为
+
+
