@@ -1,0 +1,19 @@
+
+
+<html>
+<head>
+<title>≤‚ ‘</title>
+</head>
+<body>
+<script language="javascript" type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
+
+
+
+<input type="text" class="Wdate" id="d4322" onclick="WdatePicker({maxDate:'#F{$dp.$D(\'d4321\',{d:3});}'})"/>
+<input type="text" class="Wdate" id="d4321" onclick="WdatePicker({minDate:'#F{$dp.$D(\'d4322\',{d:+30});}'})"/>
+
+
+<p>hhhhhhhhhhhhhh</p>
+</body>
+</html>
+
