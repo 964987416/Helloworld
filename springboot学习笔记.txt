@@ -1,0 +1,4 @@
+启动WebApplication之前 先修改 resource 中的application.properties文件信息 （端口9090）数据库链接信息等 server.port=9090
+springboot启动好之后 地址栏输入访问的链接 如 127.0.0.1:9090/hello
+
+Assert.assertEquals();方法的作用 若括号内两者不一致则中断流程 若一致则向下执行
