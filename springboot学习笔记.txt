@@ -1,7 +1,8 @@
 启动WebApplication之前 先修改 resource 中的application.properties文件信息 （端口9090）数据库链接信息等 server.port=9090
 springboot启动好之后 地址栏输入访问的链接 如 127.0.0.1:9090/hello
 
-Assert.assertEquals();方法的作用 若括号内两者不一致则中断流程 若一致则向下执行
+断言：
+Assert.assertEquals();方法的作用 ：若括号内两者不一致则中断流程 若一致则向下执行
 
 application.properties(注释and代码)：
 server.port=9090
@@ -26,3 +27,33 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialec
 spring.jpa.show-sql=true
 #format\u4E00\u4E0Bsql\u8FDB\u884C\u8F93\u51FA
 spring.jpa.properties.hibernate.format_sql=true
+
+
+由于某些原因我们想使用自定义的 SQL 来查询，Spring Data 也是完美支持的；在 SQL 的查询方法上面使用@Query注解，如涉及到删除和修改在需要加上@Modifying.也可以根据需要添加 @Transactional对事物的支持，查询超时的设置等。
+
+
+2019-6-17 学习笔记
+/spring-boot-mybatis-annotation
+
+在 /spring-boot-mybatis-annotation/src/main/java/com/neo/MybatisAnnotationApplication.java 文件中 @MapperScan("com.neo.mapper") 的作用是将com.neo.mapper中的所有mapper映射到boot中
+
+
+
+@RequestMapping(value="/delete/{id}")
+    public void delete(@PathVariable("id") Long id) {
+    	System.out.println(id);
+    	userMapper.delete(id);
+    	
+    }
+地址栏 http://127.0.0.1:9090/delete/2        删除id为2的user
+
+
+
+/spring-boot-thymeleaf
+spring-boot 数据--->前端页面
+
+
+
+
+
+
