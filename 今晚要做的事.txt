@@ -7,11 +7,12 @@ OOAD设计模式
 健身（蛋白粉380块了解一下）
 
 #今晚必做
-建立sync传输通道（文件共享）(先将sysc安装包上传到github 再建立共享根文件夹)
+研究sync传输通道（文件共享）(先将sysc安装包上传到github 再建立共享根文件夹)
 鸡蛋羹的碗
-teamView（无限制版本）
+$teamView（无限制版本）
 咸鱼（沙发）TB（t-shirt）
 机场 梦迪机场 (测试最大链接数)
+http://blog.sina.com.cn/s/blog_45bf5d7a0102xgfz.html 修改宽带上行速度
 
 
 
