@@ -52,6 +52,35 @@ spring.jpa.properties.hibernate.format_sql=true
 /spring-boot-thymeleaf
 spring-boot 数据--->前端页面
 
+2019/6/24
+/SpringBootTestDemo 自测Demo
+
+@RestController注解相当于@ResponseBody＋ @Controller合在一起的作用。
+1)如果只是使用@RestController注解Controller，则Controller中的方法无法返回jsp页面或者html页面
+配置的视图解析器InternalResourceViewResolver不起作用，返回的内容就是Return里的内容。
+
+2)如果需要返回到指定页面，则需要用@Controller配合视图解析器InternalResourceViewResolver才行。(在application.properties中配置  spring.thymeleaf.cache=false后 页面返回到templates中)
+
+3)如果需要返回JSON，XML或自定义mediaType内容到页面，则需要在对应的方法上加上@ResponseBody注解。
+
+
+给自建demo配置mybatis时 添加mapperTest时出现的异常
+springboot测试时出现：java.lang.IllegalStateException: 
+Unable to find a @SpringBootConfiguration, you need to use @ContextConfiguration or @SpringBootTest(classes=...) with your test
+
+原因：未在testresource中添加springboot基础启动类导致报错
+是因为我没在根目录下写一个springboot的启动类：写个App.class,再在test测试类跑起来就不会出现这个错误了
+
+/spring-boot-jpa-thymeleaf-curd
+spring-boot-jpa-thymeleaf-curd 纯洁的微笑springbootDemo 
+使用maven打包之后 拿到jar包放到指定位置 本地进入cmd窗口  （F:\springboot-crud.jar）
+cmd窗口运行 java -jar F:\springboot-crud.jar
+
+
+
+
+
+
 
 
 
