@@ -9,9 +9,9 @@ OOAD设计模式
 #今晚必做
 咸鱼（沙发）
 机场 梦迪机场 (测试最大链接数)
-http://blog.sina.com.cn/s/blog_45bf5d7a0102xgfz.html 修改宽带上行速度
 研究机场引流  寻找高性价比机场（不限端口只限流量）
 研究一起看 积分模板
+--http://blog.sina.com.cn/s/blog_45bf5d7a0102xgfz.html 修改宽带上行速度 (已完成 但并无卵用)
 --鸡蛋羹的碗 （已购买）
 --$teamView<无限制版本> （已启用）
 -- T-shirt  （spao已买）
