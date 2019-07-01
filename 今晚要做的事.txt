@@ -5,18 +5,28 @@ OOAD设计模式
 抖友群 接话题热门
 买书（springboot spring mybatis)
 健身（蛋白粉380块了解一下）
+建立博客站
+个人域名网页 
 
 #今晚必做
-咸鱼（沙发）
+买spring springboot 的书
+下载洋葱浏览器 访问暗网
+锻念
+
 机场 梦迪机场 (测试最大链接数)
 研究机场引流  寻找高性价比机场（不限端口只限流量）
 研究一起看 积分模板
---http://blog.sina.com.cn/s/blog_45bf5d7a0102xgfz.html 修改宽带上行速度 (已完成 但并无卵用)
+
+咸鱼（沙发）<放不下不买了>
+--http://blog.sina.com.cn/s/blog_45bf5d7a0102xgfz.html 修改宽带上行速度 (已完成 但无卵用)
 --鸡蛋羹的碗 （已购买）
 --$teamView<无限制版本> （已启用）
 -- T-shirt  （spao已买）
 --研究sync传输通道（文件共享）(先将sysc安装包上传到github 再建立共享根文件夹) <失败>
 
+
+#学习
+数据库
 
 
 #机场

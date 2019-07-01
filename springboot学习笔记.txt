@@ -192,5 +192,95 @@ application对象
 				<error-code>404</error-code>
 				<location>/404.html</location>
 			</error-page>
+2019/06/26
+事务四大特性
 
-16c8jz
+原子性（Atomicity）：事务是一个原子操作，由一系列动作组成。事务的原子性确保动作要么全部完成，要么完全不起作用。
+一致性（Consistency）：一旦事务完成（不管成功还是失败），系统必须确保它所建模的业务处于一致的状态，而不会是部分完成部分失败。在现实中的数据不应该被破坏。
+隔离性（Isolation）：可能有许多事务会同时处理相同的数据，因此每个事务都应该与其他事务隔离开来，防止数据损坏。
+持久性（Durability）：一旦事务完成，无论发生什么系统错误，它的结果都不应该受到影响，这样就能从任何系统崩溃中恢复过来。通常情况下，事务的结果被写到持久化存储器中。
+
+springboot 定时任务
+@Scheduled
+每隔5秒执行一次："*/5 * * * * ?"
+
+每隔1分钟执行一次："0 */1 * * * ?"
+
+每天23点执行一次："0 0 23 * * ?"
+
+每天凌晨1点执行一次："0 0 1 * * ?"
+
+每月1号凌晨1点执行一次："0 0 1 1 * ?"
+
+每月最后一天23点执行一次："0 0 23 L * ?"
+
+每周星期天凌晨1点实行一次："0 0 1 ? * L"
+
+在26分、29分、33分执行一次："0 26,29,33 * * * ?"
+
+每天的0点、13点、18点、21点都执行一次："0 0 0,13,18,21 * * ?"
+
+表示在每月的1日的凌晨2点调度任务："0 0 2 1 * ? *"
+
+表示周一到周五每天上午10：15执行作业："0 15 10 ? * MON-FRI" 
+
+表示2002-2006年的每个月的最后一个星期五上午10:15执行："0 15 10 ? 6L 2002-2006"
+
+
+2019/06/27
+SpringBoot获取配置值的两种方式
+先在配置文件application.properties中声明配置值 如 
+#自定义配置
+com.briup.username=moose
+com.briup.password=626262 
+
+1、使用@Value()直接取值
+在需要取值的controller中
+@Value("${com.briup.username}")
+String username;
+@Value("${com.briup.password}")
+String password;
+
+2019/07/01
+#string比较
+ * string的equals方法 先比较两个字符串长度是否相等 再将字符串分割进行逐一比对  分析源码可知
+ * equals比较的是文字内容手否相等 ==比较的是对象在内存堆栈中的地址值，string在内存中先开辟了一段堆栈空间来存储"wdnmd"这个字符串 
+ * 后面new的str1 并不会在堆栈中新开辟内存空间 所以str1.equals(str) 而且 str==str1
+ * str2声明是在堆栈中重新new的"wdnmd" 所以 equals比较为true ==比较为false 
+
+
+学习h2内嵌数据库
+学习博客：https://blog.csdn.net/sinianliushui/article/details/79895077
+
+将h2jar包放到f盘根目录后 
+进入cmd命令行
+输入f:
+输入java -classpath h2.jar org.h2.tools.Console -web 以web-console方式启动h2数据库
+打开浏览器 输入localhost:8082 进入h2图形化界面 
+
+#springboot Thymeleaf学习 
+添加Thymeleaf依赖
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-thymeleaf</artifactId>
+</dependency>
+<dependency>
+    <groupId>nz.net.ultraq.thymeleaf</groupId>
+    <artifactId>thymeleaf-layout-dialect</artifactId>
+</dependency>
+
+页面传参
+		 Map<String,Object> map= new HashMap<>();
+		 map.put("name", "赵铁柱");
+		 map.put("password", "123123");
+		 map.put("age", "62");
+		 //model添加map 通过map方式传递对象参数
+		 model.addAttribute("stu",map);
+		 //model中添加string
+		 model.addAttribute("name","王大锤");	
+		 model.addAttribute("password","626262");	
+		 model.addAttribute("age","23");	
+		 //model中添加对象
+		 model.addAttribute("student",new Student("张全蛋","88888",100));
+
+
