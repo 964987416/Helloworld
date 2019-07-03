@@ -255,6 +255,7 @@ String password;
 将h2jar包放到f盘根目录后 
 进入cmd命令行
 输入f:
+输入 cd jar/
 输入java -classpath h2.jar org.h2.tools.Console -web 以web-console方式启动h2数据库
 打开浏览器 输入localhost:8082 进入h2图形化界面 
 
@@ -282,5 +283,22 @@ String password;
 		 model.addAttribute("age","23");	
 		 //model中添加对象
 		 model.addAttribute("student",new Student("张全蛋","88888",100));
+2019/07/02学习springboot整合jpa
 
+service 及实现类要注意注解是否添加 
+
+本人的错误原因是：entity，service，serviceImpl，controller等这些包
+和Application.java SpringBoot程序的入口不在同一个包且不在Application.java的子包中。
+
+原因是：SpringBoot运行时所加载的包是Application.java本包及其子包的代码。所以根本扫描不到其他包，你怎么改注解都是错误的。
+
+2019/07/03学习springboot整合mybatis-plus/h2数据库
+
+h2数据库在内存中生成 项目关闭后数据也随之销毁 比较适用于开发时项目测试
+
+测试学习了 λ表达式作为参数传递java8新特性
+
+springboot mybatis多数据源整合
+
+redis整合(未整合到demo)
 
