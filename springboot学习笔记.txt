@@ -301,4 +301,60 @@ h2数据库在内存中生成 项目关闭后数据也随之销毁 比较适用于开发时项目测试
 springboot mybatis多数据源整合
 
 redis整合(未整合到demo)
+2019/07/04
+整合redis到bootDemo
+打开一个 cmd 窗口 使用cd命令切换目录到 E:\redis 运行 redis-server.exe redis.windows.conf 。
+1、 E:\redis
+2、 redis-server.exe redis.windows.conf
 
+出现画面后这时候另启一个cmd窗口，原来的不要关闭，不然就无法访问服务端了。
+
+切换到redis目录下运行 redis-cli.exe -h 127.0.0.1 -p 6379 。
+
+设置键值对 set myKey abc
+
+取出键值对 get myKey
+
+1、 cd c:\redis
+2、 redis-cli.exe -h 127.0.0.1 -p 6379
+3、 set myKey abc
+4、 get myKey
+
+查看redis所有keys 
+keys *
+清除所有key
+flush all
+
+mysql建立索引
+user表为例  id,userName,userCode,password,createDate,updateDate
+#显示所有索引
+SHOW INDEX FROM USER;
+
+#创建简单索引
+
+#为userName创建普通索引 
+CREATE INDEX NAME ON USER(username); 
+#改变表结构方式创建索引
+ALTER TABLE USER ADD INDEX CODE(usercode);
+
+#创建唯一约束索引
+CREATE UNIQUE INDEX PASSWORD ON USER(PASSWORD);
+ALTER TABLE USER ADD UNIQUE createdate (createdate);
+
+#删除索引
+DROP INDEX CODE ON USER; 
+
+2019/07/08
+springboot整合Quartz框架 实现定时任务 
+定时查询，定时插入
+
+查看spring-boot-starter-parent 依赖源码  （内部定义 parent-depencies parent-depencies中定义 jdk编译版本 各jar包版本依赖 配置文件加载等等）
+
+Security 和Shiro的区别
+由于 Spring Boot 官方提供了大量的非常方便的开箱即用的 Starter ，包括 Spring Security 的 Starter ，使得在 Spring Boot 中使用 Spring Security 变得更加容易，甚至只需要添加一个依赖就可以保护所有的接口，所以，如果是 Spring Boot 项目，一般选择 Spring Security 。当然这只是一个建议的组合，单纯从技术上来说，无论怎么组合，都是没有问题的。Shiro 和 Spring Security 相比，主要有如下一些特点：
+Spring Security 是一个重量级的安全管理框架；Shiro 则是一个轻量级的安全管理框架
+Spring Security 概念复杂，配置繁琐；Shiro 概念简单、配置简单
+Spring Security 功能强大；Shiro 功能简单
+
+Spring Boot 中针对系统启动任务提供了两种解决方案：
+分别是 CommandLineRunner 和 ApplicationRunner

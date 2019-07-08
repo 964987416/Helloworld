@@ -16,6 +16,7 @@ OOAD设计模式
 机场 梦迪机场 (测试最大链接数)
 研究机场引流  寻找高性价比机场（不限端口只限流量）
 研究一起看 积分模板
+注册美区id
 
 咸鱼（沙发）<放不下不买了>
 --http://blog.sina.com.cn/s/blog_45bf5d7a0102xgfz.html 修改宽带上行速度 (已完成 但无卵用)
@@ -27,7 +28,9 @@ OOAD设计模式
 
 #学习
 数据库
-
+springcloud
+springboot 微服务 
+java并发编程
 
 #机场
 梦迪机场链接：https://nmsl.ws	964987416@qq.com/yyj2670538
