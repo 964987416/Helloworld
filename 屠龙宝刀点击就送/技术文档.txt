@@ -1,0 +1,134 @@
+MongoDB 简介
+MongoDB（来自于英文单词“Humongous”，中文含义为“庞大”）是可以应用于各种规模的企业、各个行业以及各类应用程序的开源数据库。基于分布式文件存储的数据库。由C++语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。MongoDB 是一个高性能，开源，无模式的文档型数据库，是当前 NoSql 数据库中比较热门的一种。
+
+MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。他支持的数据结构非常松散，是类似 json 的 bjson 格式，因此可以存储比较复杂的数据类型。MongoDB 最大的特点是他支持的查询语言非常强大，其语法有点类似于面向对象的查询语言，几乎可以实现类似关系数据库单表查询的绝大部分功能，而且还支持对数据建立索引。
+
+传统的关系数据库一般由数据库（database）、表（table）、记录（record）三个层次概念组成，MongoDB 是由数据库（database）、集合（collection）、文档对象（document）三个层次组成。MongoDB 对于关系型数据库里的表，但是集合中没有列、行和关系概念，这体现了模式自由的特点。
+
+MongoDB 中的一条记录就是一个文档，是一个数据结构，由字段和值对组成。MongoDB 文档与 JSON 对象类似。字段的值有可能包括其它文档、数组以及文档数组。MongoDB 支持 OS X、Linux 及 Windows 等操作系统，并提供了 Python，PHP，Ruby，Java及 C++ 语言的驱动程序，社区中也提供了对 Erlang 及 .NET 等平台的驱动程序。
+
+MongoDB 的适合对大量或者无固定格式的数据进行存储，比如：日志、缓存等。对事物支持较弱，不适用复杂的多文档（多表）的级联查询。文中演示 Mongodb 版本为 3.5。
+
+Redis
+使用Redis缓存解决跨域session问题
+
+
+
+
+
+Jpa
+(Java Persistence API) 是 Sun 官方提出的 Java 持久化规范。它为 Java 开发人员提供了一种对象/关联映射工具来管理 Java 应用中的关系数据。它的出现主要是为了简化现有的持久化开发工作和整合 ORM 技术，结束现在 Hibernate，TopLink，JDO 等 ORM 框架各自为营的局面。
+
+值得注意的是，Jpa是在充分吸收了现有 Hibernate，TopLink，JDO 等 ORM 框架的基础上发展而来的，具有易于使用，伸缩性强等优点。从目前的开发社区的反应上看，Jpa 受到了极大的支持和赞扬，其中就包括了 Spring 与 EJB3. 0的开发团队。
+
+注意:Jpa 是一套规范，不是一套产品，那么像 Hibernate,TopLink,JDO 他们是一套产品，如果说这些产品实现了这个 Jpa 规范，那么我们就可以叫他们为 Jpa 的实现产品。
+
+Spring Boot Jpa
+Spring Boot Jpa 是 Spring 基于 ORM 框架、Jpa 规范的基础上封装的一套 Jpa 应用框架，可使开发者用极简的代码即可实现对数据的访问和操作。它提供了包括增删改查等在内的常用功能，且易于扩展！学习并使用 Spring Data Jpa 可以极大提高开发效率！
+
+ Jpa配置多数据源
+
+日常项目中因为使用的分布式开发模式，不同的服务有不同的数据源，常常需要在一个项目中使用多个数据源，因此需要配置 Spring Boot Jpa 对多数据源的使用，一般分一下为三步：
+
+1 配置多数据源
+2 不同源的实体类放入不同包路径
+3 声明不同的包路径下使用不同的数据源、事务支持
+异构数据库多源支持
+比如我们的项目中，即需要对 mysql 的支持，也需要对 Mongodb 的查询等。
+
+实体类声明@Entity 关系型数据库支持类型、 声明@Document 为 Mongodb 支持类型，不同的数据源使用不同的实体就可以了
+
+
+
+
+mybatis-plus
+
+官网说的特性太多了，挑了几个有特点的分享给大家。
+
+无侵入：只做增强不做改变，引入它不会对现有工程产生影响，如丝般顺滑
+损耗小：启动即会自动注入基本 CURD，性能基本无损耗，直接面向对象操作
+强大的 CRUD 操作：内置通用 Mapper、通用 Service，仅仅通过少量配置即可实现单表大部分 CRUD 操作，更有强大的条件构造器，满足各类使用需求
+支持 Lambda 形式调用：通过 Lambda 表达式，方便的编写各类查询条件，无需再担心字段写错
+支持多种数据库：支持 MySQL、MariaDB、Oracle、DB2、H2、HSQL、SQLite、Postgre、SQLServer2005、SQLServer 等多种数据库
+内置分页插件：基于 MyBatis 物理分页，开发者无需关心具体操作，配置好插件之后，写分页等同于普通 List 查询
+
+
+Spring-Cloud-Eureka
+
+Spring Cloud 封装了 Netflix 公司开发的 Eureka 模块来实现服务注册和发现。Eureka 采用了 C-S 的设计架构。Eureka Server 作为服务注册功能的服务器，它是服务注册中心。而系统中的其他微服务，使用 Eureka 的客户端连接到 Eureka Server，并维持心跳连接。这样系统的维护人员就可以通过 Eureka Server 来监控系统中各个微服务是否正常运行。Spring Cloud 的一些其他模块（比如Zuul）就可以通过 Eureka Server 来发现系统中的其他微服务，并执行相关的逻辑。
+
+Eureka由两个组件组成：Eureka服务器和Eureka客户端。Eureka服务器用作服务注册服务器。Eureka客户端是一个java客户端，用来简化与服务器的交互、作为轮询负载均衡器，并提供服务的故障切换支持。Netflix在其生产环境中使用的是另外的客户端，它提供基于流量、资源利用率以及出错状态的加权负载均衡。
+
+1、Eureka Server
+提供服务注册和发现
+
+2、Service Provider
+服务提供方
+将自身服务注册到Eureka，从而使服务消费方能够找到
+
+3、Service Consumer
+服务消费方
+从Eureka获取注册服务列表，从而能够消费服务
+
+通过@LoadBalanced 注解
+
+注入IRule 规则
+自定义配置ribbon负载均衡算法
+
+过滤xss攻击 
+解决数据库索引丢失问题
+
+
+springcloud请求过程
+1、请求统一通过API网关（Zuul）来访问内部服务.
+
+2、网关接收到请求后，从注册中心（Eureka）获取可用服务
+
+3、由Ribbon进行均衡负载后，分发到后端具体实例
+
+4、微服务之间通过Feign进行通信处理业务
+
+5、Hystrix负责处理服务超时熔断
+
+6、Turbine监控服务间的调用和熔断相关指标
+
+
+RabbitMQ 
+
+四种交换机类型
+Direct, topic, Headers and Fanout
+
+一对多 一个发送端，一个接收端
+多对多 两个发送端，两个接收端
+
+转发时将消息均匀的分发给接收者
+
+
+
+
+Fanout Exchange  散开转发
+
+任何发送到Fanout Exchange的消息都会被转发到与该Exchange绑定(Binding)的所有Queue上。
+
+1、可以理解为路由表的模式
+2、这种模式不需要RouteKey
+3、这种模式需要提前将Exchange与Queue进行绑定，一个Exchange可以绑定多个Queue，一个Queue可以同多个Exchange进行绑定。
+4、一个发送到交换机的消息都会被转发到与该交换机绑定的所有队列上。很像子网广播，每台子网内的主机都获得了一份复制的消息。
+5、如果接受到消息的Exchange没有与任何Queue绑定，则消息会被抛弃。
+6、Fanout交换机转发消息是最快的。
+
+Direct Exchange	指定转发
+
+任何发送到Direct Exchange的消息都会被转发到RouteKey中指定的Queue。
+1、处理路由键
+2、需要将一个队列绑定到交换机上，要求该消息与一个特定的路由键完全匹配。这是一个完整的匹配。如果一个队列绑定到该交换机上要求路由键 “dog”，则只有被标记为“dog”的消息才被转发，不会转发dog.puppy，也不会转发dog.guard，只会转发dog。
+3、一般情况可以使用rabbitMQ自带的Exchange：" "(该Exchange的名字为空字符串，下文称其为default Exchange)。
+4、这种模式下不需要将Exchange进行任何绑定(binding)操作
+5、消息传递时需要一个“RouteKey”，可以简单的理解为要发送到的队列名字。
+6、如果vhost中不存在RouteKey中指定的队列名，则该消息会被抛弃。
+
+
+
+
+
+ 通过xshell工具 搭建vps服务器 成功越过GFW转发国内请求 实现外网访问
